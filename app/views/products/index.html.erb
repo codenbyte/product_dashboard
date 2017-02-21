@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Listing products</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <% @products.each do |product| %>
+
+
+        <tr>
+            <td><%= product.name %></td>
+            <td><%= product.description %></td>
+            <td>$<%= product.pricing %></td>
+            <td><%= product.category.name %></td>
+            <td>
+
+                <a href='/products/<%= product.id %>'class='btn btn-default'>Show</a> | <a href='/products/<%= product.id %>/edit' class='btn btn-default'>Edit</a> | <a href='/products/<%= product.id %>/delete' class='btn btn-default'>Delete</a>
+            </td>
+        <% end %>
+        </tr>
+
+
+
+
+
+    </tbody>
+  </table>
+  <div class='row'>
+     <a href='/new' class='btn btn-default'>New product</a>
+   </div>
+</div>

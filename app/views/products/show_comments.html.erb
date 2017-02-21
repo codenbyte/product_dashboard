@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Products' comments</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Comments</th>
+        <th>Products</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <% @comments.each do |comment| %>
+        <tr>
+            <td><%= comment.comment %></td>
+            <td><%= comment.product.name %></td>
+
+            <% end %>
+        </tr>
+    </tbody>
+  </table>
+
+<div class='row'>
+    <a href='/' class='btn btn-default'>
+        Back</a>
+</div>

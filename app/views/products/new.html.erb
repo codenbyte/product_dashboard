@@ -1,0 +1,46 @@
+<div class='container'>
+  <h1>New Product</h1>
+
+
+
+  <div class='row'>
+      <label for="pricing">Category:</label>
+      <select name="category_id">
+          <option value="1">Electronics</option>
+          <option value="2">Household</option>
+          <option value="3">Gardening</option>
+          <option value="4">Automotive</option>
+          <option value="5">Ninjas</option>
+      </select><hr>
+
+    <form action='/create' method='post'>
+      <input type='hidden' name="authenticity_token" value="<%= form_authenticity_token  %>">
+
+      
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name='name'>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" class="form-control" id="description" name="description">
+      </div>
+
+
+      <div class="form-group">
+        <label for="pricing">Pricing:</label>
+        <input type="pricing" class="form-control" id="pricing" name='pricing'>
+      </div>
+
+      <button type="submit" class="btn btn-default">Create Product</button>
+    </form>
+
+  </div>
+
+
+  <div class='row'>
+    <a href='/' class='btn btn-default'>back</a>
+  </div>
+
+</div>
